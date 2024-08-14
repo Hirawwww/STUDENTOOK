@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: arial;
+            background-color: #4d9eeb;
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            box-shadow: 5px 5px 2px rgb(8, 73, 146);
+        }
+        .button img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/logo2.jfif" alt="Logo" class="logo">
+    <button class="button" onclick="window.location.href='/books'">
+        <img src="imagens/logo_listaLivros.png" alt="Lista de Livros">
+        Lista de Livros
+    </button>
+    <button class="button" onclick="window.location.href='/activities'">
+        <img src="imagens/logo_atividades.png" alt="Atividades">
+        Atividades
+    </button>
+    <button class="button" onclick="window.location.href='/points'">
+        <img src="imagens/logo_pontos.png" alt="Pontos">
+        Pontos
+    </button>
+</body>
+</html>
+
+
+
