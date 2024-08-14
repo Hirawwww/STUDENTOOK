@@ -11,11 +11,11 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #fff;
+            background-color: #f7f7f7;
         }
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
         }
         form {
             display: flex;
@@ -28,17 +28,33 @@
             font-size: 16px;
         }
         button {
+            display: flex;
+            align-items: center;
+            margin: 10px;
             padding: 10px 20px;
-            font-size: 16px;
-            background-color: #8345f7;
-            color: white;
+            font-size: 20px;
+            background-color: #4d9eeb;
+            color: rgb(0, 0, 0);
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            box-shadow: 5px 5px 2px rgb(8, 73, 146);
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+        button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0870d1;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <img src="imagens/logo.png" alt="Logo" class="logo">
+    <img src="imagens/logo2.jfif" alt="Logo" class="logo">
     <form action="/register" method="post">
         <input type="text" name="username" placeholder="Nome de Usuário" required>
         <input type="password" name="password" placeholder="Sua Senha" required>
