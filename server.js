@@ -342,6 +342,7 @@ app.post('/reset/:token', (req, res) => {
 app.get('/reset/:token', (req, res) => {
     const { token } = req.params;
 
+    console.log('Procurando a view resetar_senha no diretório de views');
 
     const query = 'SELECT * FROM usuarios WHERE resetPasswordToken = ? AND resetPasswordExpires > ?';
     db.query(query, [token, Date.now()], (err, results) => {
@@ -351,7 +352,8 @@ app.get('/reset/:token', (req, res) => {
             return;
         }
         if (results.length > 0) {
-            res.render('resetar_senha', { token }); // Renderize o template com o token
+            console.log('Token válido. Renderizando view resetar_senha.');
+            res.render('resetar_senha', { token });
         } else {
             res.send('Token de recuperação de senha é inválido ou expirou.');
         }
