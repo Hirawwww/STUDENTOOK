@@ -358,6 +358,26 @@ app.get('/reset/:token', (req, res) => {
     });
 });
 
+// Rota para obter o link do PDF de um livro pelo título
+app.get('/api/book-link', (req, res) => {
+    const titulo = req.query.titulo;
+    const query = 'SELECT pdf FROM livros WHERE titulo = ?';
+
+    db.query(query, [titulo], (err, results) => {
+        if (err) {
+            console.error('Erro ao obter link do livro:', err);
+            res.status(500).send('Erro ao obter link do livro');
+            return;
+        }
+        if (results.length > 0) {
+            res.json(results[0]);
+        } else {
+            res.status(404).send('Livro não encontrado');
+        }
+    });
+});
+
+
 
 // Iniciar o servidor
 app.listen(port, () => {
