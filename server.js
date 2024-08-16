@@ -379,7 +379,14 @@ app.get('/api/book-link', (req, res) => {
     });
 });
 
-
+// Rota pras atividade
+app.get('/activities', (req, res) => {
+    res.sendFile(path.join(__dirname, '/atividades.html'));
+});
+// Rota pras atividade
+app.get('/conjuntos', (req, res) => {
+    res.sendFile(path.join(__dirname, '/Conjuntos.html'));
+});
 
 // Iniciar o servidor
 app.listen(port, () => {
