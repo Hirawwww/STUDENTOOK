@@ -106,33 +106,6 @@
     <div class="pontuacao">
         <span>
             Pontos: 
-            <script>
-                const getPointsQuery = `SELECT pontos FROM pontos WHERE user_id = ?`;
-                db.query(getPointsQuery, [userId], (err, results) => {
-                    if (err) {
-                        console.error('Erro ao verificar pontos do usuário:', err);
-                        return res.status(500).send({
-                            message: 'Erro ao verificar pontos.',
-                            style: 'font-family: Comic Sans MS; color: red;'
-                        });
-                    }
-
-                    if (results.length > 0) {
-                        // Usuário já tem pontos, atualizar o total
-                        const currentPoints = results[0].pontos;
-                       
-
-                            const feedbackMessage = pontosGanhados > 0
-                                ? 'Resposta correta! Você ganhou 10 pontos.'
-                                : 'Resposta incorreta! Tente novamente.';
-
-                            res.send({
-                                message: feedbackMessage,
-                                style: 'font-family: Comic Sans MS; color: green;'
-                            });
-                        });
-                    };
-            </script>
             </span>
     </div>
 

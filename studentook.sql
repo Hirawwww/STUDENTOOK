@@ -19,12 +19,7 @@ CREATE TABLE livros (
     categoria ENUM('school', 'others') NOT NULL
 );
 
-CREATE TABLE atividades (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
-    descricao TEXT NOT NULL,
-    data_entrega DATE
-);
+
 
 CREATE TABLE pontos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -121,6 +116,19 @@ select*from atividades;
 select*from respostas_usuario;
 select*from usuarios;
 
+delete from respostas_usuario where user_id = 1;
 
-delete from respostas_usuario where user_id = 4;
-delete from pontos where user_id = 4;
+show tables ;
+
+drop table atividades;
+
+describe pontos;
+describe respostas_usuario;
+
+drop table pontos;
+drop table respostas_usuario;
+
+delete from respostas_usuario where user_id = 6;
+
+
+
