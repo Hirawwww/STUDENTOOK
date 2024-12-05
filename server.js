@@ -151,7 +151,7 @@ app.use('/uploads', express.static('uploads'));
 
 // Rota para a tela de início (HTML)
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/livros.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 
