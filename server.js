@@ -157,7 +157,7 @@ app.get('/', (req, res) => {
 
 // Rota para a próxima tela (HTML)
 app.get('/next', (req, res) => {
-    res.sendFile(__dirname + '/tela_2.html');
+    res.sendFile(__dirname + './tela_2.html');
 });
 
 app.get('/menu', checkLogin, (req, res) => {
